@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Super Calculadora</h1>
+    <form>
+
+        <div class="conainer-form">
+            <div class="flex-column">
+                <input type="text" id="valor1" placeholder="Digite o Primeiro Número">
+                <input type="text" id="valor2" placeholder="Digite o Segundo Número">
+                <input type="button" onclick="onFocusCalc()" value="Calcular">
+            </div>
+            <h2>Cálculos</h2>
+            <div class="grid-4">
+                <div class="flex">
+                <label for="soma"> Soma (a+b)</label>
+                <input type="text" name="input-soma" id="soma">
+            </div>
+            <div class="flex">
+                <label for="subtracao1"> Subtração (a-b)</label>
+                <input type="text" id="subtracao1">
+            </div>
+            <div class="flex">
+                <label for="subtracao2">Subtração (b-a)</label>
+                <input type="text"  id="subtracao2">
+            </div>
+            <div class="flex">
+                <label for="multiplicacao">Multiplicação (a*b) </label>
+                <input type="text"  id="multiplicacao">
+            </div>
+            <div class="flex">
+                <label for="div1"> Divisão (a/b)</label>
+                <input type="text" name="input-soma" id="div1">
+            </div>
+            <div class="flex">
+                <label for="div2"> Divisão (b/a))</label>
+                <input type="text" id="div2">
+            </div>
+            <div class="flex">
+                <label for="quad1">Quadrado de A</label>
+                <input type="text"  id="quad1">
+            </div>
+            <div class="flex">
+                <label for="quad2">Quadrado de B </label>
+                <input type="text"  id="quad2">
+            </div>
+            <div class="flex">
+                <label for="divisores1">Divisores de A </label>
+                <input type="text"  id="divisores1">
+            </div>
+            <div class="flex">
+                <label for="divisores2">Divisores de B </label>
+                <input type="text"  id="divisores2">
+            </div>
+            <div class="flex">
+                <label for="fatorial1">Fatorial A </label>
+                <input type="text"  id="fatorial1">
+            </div>
+            <div class="flex">
+                <label for="fatorial2">Fatorial de B</label>
+                <input type="text"  id="fatorial2">
+            </div>
+        </div>
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+</html>

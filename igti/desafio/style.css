@@ -1,0 +1,15 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{color: hsl(191, 40%, 40%);}
+.flex{display:flex; flex-direction: column;}
+.grid-4{display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+input{padding: 8px; font-size: 1.2em;}
+label{margin-bottom: 0.6em;}
+input[type=button]{
+    background: rgb(0, 153, 115);
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
