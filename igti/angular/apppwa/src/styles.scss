@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(205, 50, 50);
+  border: 2px solid maroon;
+}
+.box2{
+  background-color: mediumorchid;
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+}
+.borderGreen{
+  border: 2px solid chartreuse;
+}
+

@@ -1,0 +1,14 @@
+<h3>Componente C1</h3>
+<p>Tamanho do input: <input type="number" [(ngModel)]="boxSize" ></p>
+<div class="container-flex">
+  <div [class]="className"></div>
+  <div [class]="{box2: true, box: false}"></div>
+  <div [class.box]="true" [class.borderGreen]="false"></div>
+  <div [class.box]="true" [style]="'border-color:' + 'yellow;'"></div>
+  <div [class.box]="true" [style.border-color]="'green'"></div>
+
+  <div [class.box]="true" [style.width.em]="10"></div>
+
+  <div [class.box]="true" [style.width.em]="boxSize"></div>
+</div>
+<app-c2></app-c2>

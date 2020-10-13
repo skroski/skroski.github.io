@@ -1,0 +1,9 @@
+<h1>Desafio 2</h1>
+<div>
+  <button *ngIf="!config"  (click)="config = true" >Configurações</button>
+  <button *ngIf="config"  (click)="config = true" >Voltar</button>
+</div>
+<div></div>
+<div></div>
+<app-config *ngIf="config" [exercises]="exercises" >Configurações:</app-config>
+<app-timer *ngIf="!config" [exercises]="exercises" >Cronômetro:</app-timer>

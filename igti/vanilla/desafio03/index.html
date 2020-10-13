@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios Devs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Search Devs</h1>
+    <input type="text" name="inputName" id="inputName" autofocus placeholder="Pesquisa por nome:">
+    <label for="inputName">Pesquisa Por Nome</label>
+    <div id="filteredOptions">
+        <div id="checkboxes"></div>
+        <div id="radioButtons">
+            <label for="" class="option">
+                <input type="radio" name="radioGroup" id="radioAnd"> AND
+            </label>
+            <label for="" class="option">
+                <input type="radio" name="radioGroup" id="radioOr" checked> OR
+            </label>
+        </div>
+    </div>
+    <div id="divDevs"></div>
+
+
+    <script defer src="./js/script.js"></script>
+</body>
+</html>
