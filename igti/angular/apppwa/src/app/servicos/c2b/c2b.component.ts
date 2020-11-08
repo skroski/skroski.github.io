@@ -10,7 +10,7 @@ import { TEMA } from '../../app.module';
 export class C2bComponent implements OnInit {
 
   todoListService: TodoListService;
-  constructor(todoListService: TodoListService, @Inject(TEMA)public tema:string) {
+  constructor(todoListService: TodoListService, @Inject(TEMA) public tema: string) {
     this.todoListService = todoListService;
   }
 

@@ -26,6 +26,7 @@ import { JoinStringsPipe } from './pipes/join-strings.pipe';
 import { ServicosComponent } from './servicos/servicos.component';
 import { C2bComponent } from './servicos/c2b/c2b.component';
 import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const TEMA = new InjectionToken<string>('app.theme');
 registerLocaleData(localePt);
@@ -50,12 +51,13 @@ registerLocaleData(localePt);
     JoinStringsPipe,
     ServicosComponent,
     C2bComponent,
-    FormsComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{provide: LOCALE_ID, useValue: 'pt' }, {provide: TEMA, useValue: 'dark'}],

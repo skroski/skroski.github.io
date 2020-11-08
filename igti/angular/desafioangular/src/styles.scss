@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h3{
+  background-color: hsl(244, 48%, 35%);
+  color: white;
+  padding: 16px;
+  font-size: 1.4em;
+
+}
+
+ul li{
+  list-style: none;
+  padding: 8px;
+  background: hsl(244, 90%, 90%);
+  font-weight: bold;
+}
+ul li a{
+  text-decoration: none;
+  color: hsl(244, 30%, 40%);
+}
