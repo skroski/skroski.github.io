@@ -1,0 +1,14 @@
+<ul>
+
+</ul>
+<ul>
+  <div *ngFor="let hero of heroes | async" class="grid">
+      <div><img src="{{hero.picture}}" alt=""></div>
+      <div>
+        <strong>{{hero.user}}</strong>
+        <p>{{hero.title}}</p>
+        <a [routerLink]="['detail/', hero.id]">Detalhes</a>
+        <button (click)="deleteHero(hero)" ></button>
+      </div>
+    </div>
+</ul>
