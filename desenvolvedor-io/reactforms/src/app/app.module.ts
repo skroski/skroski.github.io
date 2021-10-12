@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
+import { NgModule, Provider } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 
@@ -15,12 +14,28 @@ import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.compo
 
 import { AppRoutingModule } from './app.routes';
 
+import { AuthGuard } from './services/app.guard';
+import { CadastroGuard } from './services/cadastro.guard';
+import localePt from '@angular/common/locales/pt';
+import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
+import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
+import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
+import { BarModule } from './demos/bar-di-zones/bar.module';
+import { BarServices } from './demos/bar-di-zones/bar.service';
 
+export const BAR_PROVIDERS: Provider[] = [
+  BarServices
+];
+
+registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
+    FilmesComponent,
+    FileSizePipe,
+    ImageFormaterPipe
   ],
   imports: [
     BrowserModule,
@@ -30,10 +45,17 @@ import { AppRoutingModule } from './app.routes';
     TextMaskModule,
     NgBrazil,
     CustomFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BarModule.forRoot({
+      unidadeId: 1000,
+      unidadeToken: 'eca938c99a0e9ff91029dc'
+    }),
     
   ],
   providers: [
+    AuthGuard,
+    CadastroGuard,
+    //BAR_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })
