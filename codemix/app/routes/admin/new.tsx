@@ -1,6 +1,35 @@
 import { useActionData, Form, redirect } from "remix";
 import type { ActionFunction } from "remix";
 import { createPost } from "~/post";
+import invariant from "tiny-invariant";
+
+type PostError = {
+  title?: boolean;
+  slug?: boolean;
+  markdown?: boolean;
+};
+
+export const action: ActionFunction = async ({
+    request
+  }) => {
+await new Promise(res => setTimeout(res, 1000));
+
+  const errors: PostError = {};
+  if (!title) errors.title = true;
+  if (!slug) errors.slug = true;
+  if (!markdown) errors.markdown = true;
+
+  if (Object.keys(errors).length) {
+    return errors;
+  }
+
+  invariant(typeof title === "string");
+  invariant(typeof slug === "string");
+  invariant(typeof markdown === "string");
+  await createPost({ title, slug, markdown });
+
+  return redirect("/admin");
+};
 
 export const action: ActionFunction = async ({
     request
